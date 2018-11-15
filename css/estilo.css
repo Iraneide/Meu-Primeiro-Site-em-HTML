@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+
+/* font-family: 'Yanone Kaffeesatz', sans-serif;
+font-family: 'Open Sans', sans-serif;  */
+
+*{
+	box-sizing: border-box;
+
+}
+
+
+body{
+	margin:0 auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 1.5px;
+}
+
+
+img{
+	display:block;
+	max-width:100%;
+}
+
+
+.header{
+	height:60px;
+	
+	
+}
+
+
+.header .conteudo{
+	display:flex;
+	justify-content: space-between;
+}
+
+.conteudo{
+	margin:auto;
+	width:99%;
+	
+}
+
+.logo{
+	margin-top:10px;
+}
+
+.logo, .icon-menu{
+	margin: 5px;
+	color:#FFF;
+}
+
+
+.icon-menu{
+display:block;
+width:40px;
+height:40px;
+font-size:30px;
+background:#FBA919;
+text-align:center;
+line-height: 45px;
+border-radius: 5px;
+margin-left:auto;
+cursor:pointer;
+
+}
+
+
+.nav{
+	position:absolute;
+	top: 60px;
+	left:-100%;
+	width: 100%;
+	transition: all 0.4s;
+}
+
+
+.menu{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+
+.menu_link{
+	display:block;
+	padding: 15px;
+	background: #FBA919;
+	text-decoration: none;
+	color:#FFF;
+}
+
+
+.menu_link:hover , .select{
+	background: white;
+	color:#323b4e;
+}
+
+.mostrar{
+	left:0%;
+}
+
+
+.banner{
+	margin-top:-60px;
+	z-index: -1000;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.banner .conteudo{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:100%;
+	color:#FFF;
+	text-align:center;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.banner_titulo{
+	font-size: 25px;
+}
+
+.banner_txt{
+	display:none;
+}
+
+
+.info_coluna{
+	background:#FBA919;
+	color:#FFF;
+	padding:15px;
+	margin-bottom:30px;
+}
+
+
+
+
+.cursos_coluna{
+	position:relative;
+	margin-bottom:30px;
+}
+
+.cursos_descricao{
+	position:absolute;
+	top:0;
+	left:0;
+	color:#FFF;
+	background: rgba(0,0,0,0.6);
+	width:60%;
+	height:100%;
+	padding: 5px;
+}
+
+.cursos_titulo{
+	font-size:25px;
+	margin:5px 0;
+}
+
+.section_titulo{
+	text-align:center;
+	font-size:35px;
+	color:#FBA919;
+
+}
+
+
+
+.footer{
+	background:#333;
+	color:#FFF;
+	padding:10px;
+	text-align: center;
+}
+
+.social [class^=icon-]{
+	display:inline-block;
+	color:#333;
+	text-decoration: none;
+	font-size:30px;
+	padding:10px;
+	background:white;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	line-height:40px;
+}
+
+.icon-email{
+	margin-bottom:-7px;
+}
+
+
+
+/*Aplicando media query para sites responsivos*/
+@media(min-width:480px){
+	.logo{
+		font-size:40px;
+
+	}
+
+	.banner_titulo{
+		font-size:30px;
+		margin:5px 0;
+	}
+
+	.banner_txt{
+		display:block;
+		font-size:16px;
+		margin:7px 0;
+
+	}
+
+
+	.info, .cursos{
+		display:flex;
+		justify-content: space-between;
+		margin-top: -90px;
+
+	}
+
+	.info_coluna {
+    width: 32%;
+  }
+
+
+  .info_titulo{
+  	font-size:25px;
+  	margin:5px 0;
+  }
+
+  .section_titulo{
+  	width:100%;
+  }
+
+  .cursos{
+  	flex-wrap: wrap;
+  	margin-top:0;
+  }
+
+  .cursos_coluna{
+  	width:49%;
+
+  }
+
+  .footer .social[class^="icon-"]{
+  	margin:0 10px;
+
+  }
+
+}
+
+
+
+@media(min-width:768px){
+
+	.banner_titulo{
+		font-size:50px;
+	}
+
+	.cursos_titulo{
+		font-size:40px;
+	}
+
+	}
+
+@media(min-width:1024px){
+
+	.conteudo{
+		width:1000px;
+
+	}
+
+	.section_titulo{
+		font-size:50px;
+		margin:30px 0;
+	}
+
+	.nav{
+		position:static;
+		width:auto;
+	}
+
+	.menu{
+		display:flex;
+	}
+
+	.icon-menu{
+		display:none;
+	}
+
+	.menu_link{
+		background:none;
+		font-size:20px;
+	}
+
+	.select{
+		color:#FFF;
+		background:#323b4e;
+	}
+
+	.banner_titulo{
+		font-size:60px;
+	}
+
+	.banner_txt{
+		font-size:25px;
+	}
+
+	.info{
+		margin-top: -120px;
+	}
+
+	.info_coluna{
+		padding:30px;
+	}
+
+	.info_titulo{
+		font-size:40px;
+		text-align:center;
+	}
+
+	.cursos_descricao{
+		padding:20px;
+	}
+
+	.cursos_titulo{
+		font-size:50px;
+	}
+
+
+	.cursos_txt{
+		font-size:20px;
+	}
+
+}
+
+
+
+@media(min-width:1280px){
+	.conteudo{
+		width:1200px;
+		margin:0 auto;
+	}
+
+	.logo{
+		font-size:60px;
+	}
+
+	.banner .conteudo{
+		top:40%;
+
+	}
+	.info{
+		margin-top:-220px;
+	}
+
+}
